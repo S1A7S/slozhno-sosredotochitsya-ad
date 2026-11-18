@@ -1,40 +1,114 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Сложно сосредоточиться</title>
-    <script src="./scripts/script.js"></script>
-  </head>
-  <body class="page">
+<html lang="ru" class="theme-auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <meta name="description" content="Сложно сосредоточиться — страница о внимании, привычках и способах вернуться к одной задаче.">
+  <title>Сложно сосредоточиться</title>
+  <link rel="icon" href="./icons/favicon.ico" sizes="32x32">
+  <link rel="icon" href="./icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" sizes="180x180">
+  <link rel="stylesheet" href="./fonts/fonts.css">
+  <link rel="stylesheet" href="./styles/globals.css">
+  <link rel="stylesheet" href="./styles/variables.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/dark.css">
+  <link rel="stylesheet" href="./styles/light.css">
+  <script src="./scripts/script.js" defer></script>
+</head>
+<body class="page">
+  <div class="page__content">
     <header class="header decorated-zone">
-      <nav class="header__theme-menu">
+      <span class="header__rec" aria-hidden="true">Rec</span>
+      <!-- Прекод не приложен: сохранены рекомендованные классы кнопок темы. -->
+      <nav class="header__theme-menu" aria-label="Цветовая тема">
         <ul class="header__theme-menu-list">
-          <li class="header__theme-menu-item">
-            <button
-              class="header__theme-menu-button header__theme-menu-button_type_light"
-            >
-              День
-            </button>
-          </li>
-          <li class="header__theme-menu-item">
-            <button
-              class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
-              disabled
-            >
-              Авто
-            </button>
-          </li>
-          <li class="header__theme-menu-item">
-            <button
-              class="header__theme-menu-button header__theme-menu-button_type_dark"
-            >
-              Неон
-            </button>
-          </li>
+          <li class="header__theme-menu-item"><button class="header__theme-menu-button" data-theme="light" type="button" aria-pressed="false">День</button></li>
+          <li class="header__theme-menu-item"><button class="header__theme-menu-button header__theme-menu-button_active" data-theme="auto" type="button" aria-pressed="true" disabled>Авто</button></li>
+          <li class="header__theme-menu-item"><button class="header__theme-menu-button" data-theme="dark" type="button" aria-pressed="false">Неон</button></li>
         </ul>
       </nav>
+      <h1 class="header__title">no focus</h1>
+      <p class="header__description title-decor">Что делать, когда не получается сосредоточиться?<br>Почему это происходит и как вернуть внимание к делу.</p>
     </header>
-  </body>
+    <!-- TODO COPY: тексты ниже написаны для локальной версии; сверьте с макетом. -->
+    <main class="main">
+      <section class="section" aria-labelledby="why-title">
+        <h2 class="section__title" id="why-title">Почему сосредоточиться так сложно</h2>
+        <div class="section__articles">
+          <article class="article">
+            <h3 class="title-decor">Многозадачность</h3>
+            <div class="article__text">
+              <p>Открытая статья, сообщение от друга, новая вкладка — всё это просит внимания одновременно. Кажется, что несколько дел можно вести параллельно, но на практике мы часто просто перескакиваем между ними.</p>
+              <p>Попробуйте заметить момент переключения. Иногда одного закрытого окна достаточно, чтобы снова увидеть задачу целиком. К идее одного шага мы вернёмся в разделе <a class="article__link" href="#practice-title">о концентрации</a>.</p>
+            </div>
+          </article>
+          <article class="article">
+            <h3 class="title-decor">Дофамин</h3>
+            <div class="article__text">
+              <p>Новая информация умеет привлекать внимание: хочется проверить уведомление, открыть следующее видео или обновить ленту. Длинная задача на этом фоне может казаться слишком тихой и неторопливой.</p>
+              <p>Полезно заранее решить, когда вы вернётесь к сообщениям. Тогда пауза становится частью плана, а не случайным поворотом посреди работы.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="section section_attention" aria-labelledby="attention-title">
+        <h2 class="section__title" id="attention-title">Что снижает концентрацию внимания?</h2>
+        <div class="section__articles">
+          <article class="article">
+            <h3 class="title-decor">Многозадачность</h3>
+            <div class="article__text"><p>Когда на столе и на экране слишком много начатого, трудно выбрать, за что взяться сейчас. Запишите остальные дела отдельно и оставьте перед собой одну понятную задачу.</p></div>
+          </article>
+          <article class="article">
+            <h3 class="title-decor">Еда</h3>
+            <div class="article__text"><p>Рабочие дела легко занимают весь день, включая время обеда. Попробуйте не превращать перерыв в ещё одну встречу с экраном: можно спокойно поесть и на время отложить список задач.</p></div>
+          </article>
+          <article class="article">
+            <h3 class="title-decor">Гаджеты</h3>
+            <div class="article__text"><p>Телефон рядом с клавиатурой напоминает о себе даже без звука. Если вы постоянно тянетесь к нему, уберите его из поля зрения на один рабочий отрезок и сравните ощущения.</p></div>
+          </article>
+        </div>
+      </section>
+      <section class="section" aria-labelledby="practice-title">
+        <h2 class="section__title" id="practice-title">Как концентрироваться лучше, чем золотая рыбка</h2>
+        <div class="section__articles">
+          <h3 class="title-decor">Пять простых советов</h3>
+          <article class="article">
+            <h4 class="title-decor article__subtitle">Представьте небо и облака</h4>
+            <div class="article__text"><p>Сделайте паузу и посмотрите вдаль. Можно представить, как мысли приходят и уходят, словно облака. Необязательно разбираться с каждой из них прямо сейчас.</p></div>
+          </article>
+          <article class="article">
+            <h4 class="title-decor article__subtitle">Включите музыку</h4>
+            <div class="article__text"><p>Выберите знакомый фон, который не перетягивает на себя всё внимание. Если музыка мешает, тишина тоже подойдёт. Важно найти обстановку, в которой комфортно именно вам.</p></div>
+          </article>
+          <article class="article">
+            <h4 class="title-decor article__subtitle">Прогуляйтесь</h4>
+            <div class="article__text"><p>Отойдите от рабочего места, смените маршрут и посмотрите по сторонам. Возвращаясь, сформулируйте один небольшой шаг, с которого продолжите работу.</p></div>
+          </article>
+          <article class="article">
+            <h4 class="title-decor article__subtitle">Хорошо поешьте</h4>
+            <div class="article__text"><p>В расписании стоит оставить место для обычных повседневных дел. Пообедайте без спешки, налейте воды и вернитесь к задаче, когда будете готовы.</p></div>
+          </article>
+          <article class="article">
+            <h4 class="title-decor article__subtitle">Читайте</h4>
+            <div class="article__text"><p>Небольшой текст без переключения между вкладками может стать отдельной практикой внимания. Начните с короткого отрывка, а затем перескажите себе его главную мысль. Или просто отдохните, рассматривая <a class="article__link" href="#gallery-title">картинки ниже</a>.</p></div>
+          </article>
+        </div>
+      </section>
+      <section class="gallery" aria-labelledby="gallery-title">
+        <h2 class="gallery__title title-decor" id="gallery-title">А можно в картинках?</h2>
+        <!-- TODO IMAGES: замените SVG на изображения из заготовки, обновите alt. -->
+        <div class="gallery__images">
+          <img class="gallery__image gallery__image_sunset" src="./images/sunset.svg" width="1000" height="500" loading="lazy" alt="Иллюстрация: розовое солнце садится за фиолетовые горы">
+          <img class="gallery__image gallery__image_ice" src="./images/ice-cream.svg" width="600" height="900" loading="lazy" alt="Иллюстрация: рожок с тремя шариками мороженого на розовом фоне">
+          <img class="gallery__image gallery__image_tape" src="./images/tape.svg" width="600" height="900" loading="lazy" alt="Иллюстрация: фиолетовая аудиокассета на синем фоне">
+          <img class="gallery__image gallery__image_books" src="./images/books.svg" width="700" height="650" loading="lazy" alt="Иллюстрация: стопка разноцветных книг">
+          <img class="gallery__image gallery__image_street" src="./images/street.svg" width="1000" height="600" loading="lazy" alt="Иллюстрация: ночная улица с розовыми окнами домов">
+        </div>
+      </section>
+    </main>
+    <footer class="footer decorated-zone"><h2 class="footer__title">focus</h2></footer>
+  </div>
+</body>
 </html>
