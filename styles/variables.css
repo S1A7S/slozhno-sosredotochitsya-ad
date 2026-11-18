@@ -13,6 +13,7 @@
   --rec-display: inline-flex;
   --page-padding: 10px;
   --section-gap: 50px;
+  color-scheme: dark;
 }
 
 @media (width >= 768px) {
